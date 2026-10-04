@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Life Quest - Perimeter and Area Quest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Shared Header -->
+  <div id="header-container"></div>
+
+  <main class="main-content">
+    <div class="panel">
+      <div class="panel-header">
+        <div>
+          <h1 class="panel-title">🏞️ World 3: Real-Life Quest</h1>
+          <p style="color: var(--text-muted); margin-top: 0.25rem;">
+            Help solve real Malaysian community math missions using perimeter and area!
+          </p>
+        </div>
+      </div>
+
+      <!-- Quest Selector Tabs -->
+      <div class="tab-buttons">
+        <button class="tab-btn active" id="quest-tab-1">🌾 Quest 1: Uncle Samad's Garden</button>
+        <button class="tab-btn" id="quest-tab-2">🇲🇾 Quest 2: Merdeka Banner</button>
+        <button class="tab-btn" id="quest-tab-3">🛝 Quest 3: School Playground Ramp</button>
+      </div>
+
+      <!-- Main Quest Interactive Grid -->
+      <div class="reallife-layout">
+        <!-- Visual Diagram -->
+        <div class="svg-canvas-container">
+          <svg id="quest-svg" class="shape-svg" viewBox="0 0 450 320" width="100%" height="280">
+            <!-- Dynamic Quest Diagram -->
+          </svg>
+          <div id="quest-location-tag" style="margin-top: 0.75rem; font-weight: 700; color: var(--primary-color);">
+            Location: Kampong Durian Sebatang
+          </div>
+        </div>
+
+        <!-- Quest Problem Inputs & Interactive Steps -->
+        <div style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="badge-tag" style="background: #ecfdf5; color: #047857; margin-bottom: 0.5rem;" id="quest-badge">
+              Malaysian Scenario #1
+            </span>
+            <h2 id="quest-title" style="font-size: 1.4rem; color: var(--text-main); margin: 0.5rem 0;">
+              Uncle Samad's L-Shaped Kampong Garden
+            </h2>
+            <p id="quest-story" style="color: #334155; font-size: 1.05rem; margin-bottom: 1.25rem; line-height: 1.6;">
+              Uncle Samad wants to put a wooden fence around his L-shaped vegetable garden and plant fresh grass turf on the ground.
+            </p>
+
+            <!-- Mission Step 1: Perimeter Input -->
+            <div style="background: #f8fafc; border: 2px solid #cbd5e1; border-radius: 12px; padding: 1rem; margin-bottom: 1rem;">
+              <h4 style="color: #d97706; margin-bottom: 0.5rem;">
+                🧱 Mission Part A (Perimeter): Wooden Fence Needed
+              </h4>
+              <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0.5rem;" id="quest-parta-desc">
+                Calculate total outer boundary length:
+              </p>
+              <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <input type="number" id="input-part-a" placeholder="Enter perimeter" style="padding: 0.6rem; font-size: 1.05rem; border-radius: 8px; border: 2px solid #cbd5e1; width: 140px;">
+                <span id="unit-part-a" style="font-weight: 700; color: #475569;">m</span>
+                <button class="btn btn-amber" id="btn-check-parta" style="padding: 0.6rem 1rem; font-size: 0.95rem;">Check Fence 🧱</button>
+              </div>
+              <div id="feedback-parta"></div>
+            </div>
+
+            <!-- Mission Step 2: Area Input -->
+            <div style="background: #f8fafc; border: 2px solid #cbd5e1; border-radius: 12px; padding: 1rem; margin-bottom: 1rem;">
+              <h4 style="color: #059669; margin-bottom: 0.5rem;">
+                🌱 Mission Part B (Area): Grass Turf Area Needed
+              </h4>
+              <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0.5rem;" id="quest-partb-desc">
+                Calculate total ground area ($Area_A + Area_B$):
+              </p>
+              <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <input type="number" id="input-part-b" placeholder="Enter total area" style="padding: 0.6rem; font-size: 1.05rem; border-radius: 8px; border: 2px solid #cbd5e1; width: 140px;">
+                <span id="unit-part-b" style="font-weight: 700; color: #475569;">m²</span>
+                <button class="btn btn-green" id="btn-check-partb" style="padding: 0.6rem 1rem; font-size: 0.95rem;">Check Area 🌱</button>
+              </div>
+              <div id="feedback-partb"></div>
+            </div>
+          </div>
+
+          <!-- Victory Banner -->
+          <div id="quest-victory-box" class="step-box" style="display: none; border-left-color: #10b981; background: #ecfdf5;">
+            <p style="font-size: 1.1rem; color: #047857; font-weight: bold;">
+              🎉 Mission Accomplished! You earned 2 Star Badges! ⭐⭐
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Shared Footer -->
+  <div id="footer-container"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/reallife.js"></script>
+</body>
+</html>
