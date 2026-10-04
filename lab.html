@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shape Lab - Perimeter and Area Quest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Shared Header -->
+  <div id="header-container"></div>
+
+  <main class="main-content">
+    <div class="panel">
+      <div class="panel-header">
+        <div>
+          <h1 class="panel-title">🧪 World 1: Shape Lab</h1>
+          <p style="color: var(--text-muted); margin-top: 0.25rem;">
+            Explore composite shapes! Build and adjust dimensions to see how perimeter and area work.
+          </p>
+        </div>
+      </div>
+
+      <!-- Preset Selector -->
+      <div style="margin-bottom: 1.5rem;">
+        <label style="font-weight: 700; margin-bottom: 0.5rem; display: block;">Choose a Composite Shape Preset:</label>
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;" id="preset-buttons">
+          <button class="btn btn-outline active" data-preset="house">🏠 House (Rectangle + Triangle)</button>
+          <button class="btn btn-outline" data-preset="lshape">📐 L-Shape (Rectangle + Square)</button>
+          <button class="btn btn-outline" data-preset="rocket">🚀 Rocket (Rectangle + Eq. Triangle)</button>
+          <button class="btn btn-outline" data-preset="arrow">➡️ Arrow (Rectangle + Right Triangle)</button>
+          <button class="btn btn-outline" data-preset="gem">💎 Gem (Isosceles + Isosceles)</button>
+        </div>
+      </div>
+
+      <!-- Mode Switch Tabs -->
+      <div class="tab-buttons">
+        <button class="tab-btn active" id="tab-perimeter">📏 Outer Perimeter Mode</button>
+        <button class="tab-btn" id="tab-area">🎨 Area Decomposition Mode</button>
+      </div>
+
+      <!-- Main Lab Interactive Grid -->
+      <div class="lab-layout">
+        <!-- Visual SVG Canvas -->
+        <div class="svg-canvas-container">
+          <svg id="lab-svg" class="shape-svg" viewBox="0 0 500 400" width="100%" height="320">
+            <!-- SVG content rendered dynamically -->
+          </svg>
+          <div id="lab-canvas-legend" style="margin-top: 0.75rem; font-weight: 600; font-size: 0.95rem; text-align: center; color: var(--text-muted);">
+            <!-- Dynamic Legend -->
+          </div>
+        </div>
+
+        <!-- Controls and Calculation Breakdown -->
+        <div>
+          <div style="background: #f8fafc; border-radius: 12px; padding: 1.25rem; border: 2px solid #e2e8f0; margin-bottom: 1.5rem;">
+            <h3 style="margin-bottom: 1rem; color: var(--primary-color);" id="controls-title">Adjust Shape Dimensions</h3>
+            <div id="sliders-container">
+              <!-- Sliders inserted dynamically -->
+            </div>
+          </div>
+
+          <div id="calculation-breakdown">
+            <!-- Dynamic Calculation Step-by-Step Display -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Shared Footer -->
+  <div id="footer-container"></div>
+
+  <script src="js/common.js"></script>
+  <script src="js/lab.js"></script>
+</body>
+</html>
